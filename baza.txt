@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS bazaxd;
+
+USE bazaxd;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    dob DATE NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    voivodeship INT NOT NULL,
+    gender ENUM('male', 'female') NOT NULL,
+    newsletter TINYINT(1) DEFAULT 0,
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
